@@ -1,89 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('master')
 
-        <title>MsgApp</title>
+@section('header')
+  <nav>
+    <ul class="nav nav-pills pull-right">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">About</a></li>
+      <li role="presentation"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+@stop
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+@section('sidebar-up')
+  <h1>MsgApp</h1>
+  <p class="lead">If you want send someone a message please register our system.</p>
+  <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+@stop
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+@section('sidebar-left')
+  <h4>Today's Messages</h4>
+  <p>Dude! What's up :) </p>
 
-            .full-height {
-                height: 100vh;
-            }
+  <h4>Populer Messages</h4>
+  <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+  <h4>Testing</h4>
+  <p>Test area.</p>
+@stop
+@section('sidebar-right')
+  <h4>This is sidebar</h4>
+  <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
 
-            .position-ref {
-                position: relative;
-            }
+  <h4>What's new?</h4>
+  <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    <a href="{{ url('/login') }}">Login</a>
-                    <a href="{{ url('/register') }}">Register</a>
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                   MsgApp
-                </div>
-
-                <div class="center">
-                    <b>
-                        Message Application with Laravel 5.3
-                    </b>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+  <h4>23 October 2018</h4>
+  <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+@stop
+@section('footer')
+  <p>&copy; 2016 MsgApp </p>
+@stop
