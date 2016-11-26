@@ -103,6 +103,7 @@
     <div class="container">
         <div class="jumbotron">
             @yield('sidebar-up')
+            @yield('content')
         </div>
 
         <div class="row marketing">
