@@ -34,8 +34,9 @@
     </div>
     <div class="alert-info">
       @if (Auth::guest())
-        <form class="form-horizontal" role="form" method="POST" action="">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+
+            {{ csrf_field() }}
 
             <div class="form-group">
                 <label class="col-md-4 control-label">E-Mail Address</label>
@@ -61,9 +62,9 @@
         </form>
         <br />
       @else
-
+          <div class="text-center">
         <div>
-            Welcome,  {{ Auth::user()->name }} <span class="caret"></span>
+            Welcome,  {{ Auth::user()->name }}
         </div>
           <div>
               <ul>
@@ -78,8 +79,21 @@
                           {{ csrf_field() }}
                       </form>
                   </li>
+                  
+              </ul>
+
+              <ul>
+                  <li>
+                      <a href="{{ url('/profile') }}"> My Profiles</a>
+                  </li>
+                  <li>
+                      <a href="{{ url('/messages') }}"> Messages</a>
+                  </li>
               </ul>
           </div>
+              <br />
+          </div>
+
         @endif
     </div>
 @stop
