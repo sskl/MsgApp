@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('create', ['ms' => 'msgsend.create', 'users' => 'MessagesController@create']);
