@@ -1,4 +1,14 @@
-.idea
+/vendor
+/node_modules
+/public/files
+.env
+.project
+.buildpath
+.settings
+.vscode
+composer.lock
+/nbproject
+/.idea
 
 # Compiled source #
 ###################
